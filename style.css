@@ -1,0 +1,439 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Reset margin dan padding default pada html dan body */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navbar (nav) tetap transparan dan tidak mengganggu tata letak */
+nav {
+  margin: 0;
+  padding: 0;
+  background-color: transparent; /* Transparan agar tidak mempengaruhi background */
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: transparent;
+  z-index: 1000;
+  position: relative;
+  width: 100%;
+  position: absolute;
+}
+
+/* === LOGO === */
+.logo {
+  margin: 0 0 0 0.45em;
+}
+.logo a {
+  color: rgb(0, 0, 0);
+}
+
+.logo,
+.navigation {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.logo a,
+.navigation a {
+  text-decoration: none;
+  letter-spacing: 0.45rem;
+}
+
+/* === NAV MENU === */
+.navigation {
+  display: flex;
+}
+
+.navigation a {
+  font-size: 11px;
+  padding: 1rem;
+  margin-right: 0px;
+  display: block;
+  margin-top: 0.3rem;
+  color: rgb(9, 9, 9);
+}
+
+.navigation a:hover {
+  background: #a66e38;
+  border-radius: 100px;
+  color: white;
+}
+
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #846464;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section styling */
+.shop {
+  padding: 20px;
+  text-align: center;
+  background-color: #f5b6b6;
+}
+
+.shop h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Product grid styling */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.product {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(231, 3, 3, 0.1);
+  transition: transform 0.3s ease-in-out;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.product h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.product p {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Product hover effect */
+.product:hover {
+  transform: translateY(-10px);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .product-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .shop h2 {
+      font-size: 1.5em;
+  }
+}
+
+
+/* === BUTTON CONTACT US === */
+.flex-container input[type="button"] {
+  width: 130px;
+  height: 40px;
+  font-size: 1em;
+  margin-left: 35px;
+  display: block;
+  background-color: #6600ff;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+}
+
+.hero {
+  background-image: url("../image/hero2.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.hero {
+  height: 100vh; /* Section akan mengisi tinggi penuh dari viewport */
+  display: flex;
+  flex-direction: column; /* Mengatur elemen secara vertikal */
+  align-items: center; /* Elemen diatur ke tengah secara horizontal */
+  position: relative; /* Agar elemen di dalam bisa diposisikan */
+}
+
+.hero h1 {
+  font-size: 5rem;
+  white-space: nowrap;
+  font-weight: 400;
+  margin-bottom: 50px;
+  position: absolute;
+  top: 80px;
+  transform: translateX(-50%);
+}
+
+.hero .text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%; /* Posisikan di tengah bagian vertikal */
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Pusatkan secara horizontal dan vertikal */
+  text-align: center; /* Pastikan paragraf disejajarkan ke tengah */
+}
+
+.hero .text-container p {
+  margin: 1px 0;
+}
+
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+/* **** Media Queries **** */
+@media all and (max-width: 990px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .navigation {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+/* ** ** */
+@media all and (max-width: 600px) {
+  .logo {
+    margin: 0.25em 0;
+    align-self: left; /* Align logo di sisi kiri 'flex-container' */
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+/* Hero Section Styling */
+.hero {
+    background-image: url('image/webbbbbbbbb.webp'); 
+    padding-top: 40rem;
+    background-size: cover;
+    background-position: center;
+    height: 180vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.hero .btn {
+    padding: 0.8em 2em;
+    background-color: #ac0000;
+    color: rgb(13, 10, 10);
+    border: none;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    margin-top: 10rcap;
+}
+
+.hero .btn:hover {
+    background-color: #6d281f;
+}
+
+
+/* Shop Section */
+.shop {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.shop h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.product h3 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.product p {
+    font-size: 18px;
+    color: #666;
+}
+
+.product button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: px;
+}
+
+.product button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+  background-image: url(''); /* Ganti dengan URL gambar Anda */
+  background-size: cover; /* Agar gambar memenuhi seluruh elemen */
+  background-position: center; /* Menempatkan gambar di tengah */
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 50px;
+  background-color: #ffb8b8; /* Sebagai fallback jika gambar tidak muncul */
+}
+
+.footer-content {
+  display: flex; /* Menggunakan Flexbox */
+  justify-content: space-between; /* Memberikan jarak antara logo dan media sosial */
+  align-items: center; /* Menyelaraskan secara vertikal */
+  padding: 0 20px; /* Menambahkan padding di kiri dan kanan */
+}
+
+.footer-social {
+  display: flex; /* Menggunakan Flexbox untuk media sosial */
+  gap: 20px; /* Jarak antara ikon media sosial */
+}
+
+.footer-address {
+  display: flex; /* Menggunakan Flexbox untuk alamat */
+  align-items: center; /* Menyelaraskan ikon dengan teks alamat */
+  margin-top: 10px; /* Menambahkan margin atas jika diperlukan */
+}
+
+
+.footer-social a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  margin: 10px;
+}
+
+.footer-social a span {
+  margin-top: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #000000; /* Atur warna teks sesuai kebutuhan */
+}
+
+.footer-address {
+  display: center;
+  align-items: center;
+  margin-top: 10px;
+  color: #000000; /* Sesuaikan warna teks */
+}
+
+.footer-address i {
+  margin-right: 10px;
+  font-size: 20px; /* Sesuaikan ukuran ikon */
+}
+
+.footer-address span {
+  font-size: 14px;
+}
+
